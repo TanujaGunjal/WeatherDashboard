@@ -31,7 +31,52 @@ The application provides real-time weather information with a clean UI, proper e
 - **Tailwind CSS**
 - **OpenWeather API**
 
+## 📂 Project Structure
+
+WeatherDashboard/
+│
+├── src/
+│ ├── components/
+│ │ ├── SearchBar.tsx
+│ │ ├── EmptyState.tsx
+│ │ ├── WeatherCard.tsx
+│ │ ├── HourlyForecastSection.tsx
+│ │ └── DailyForecastSection.tsx
+│ │
+│ ├── utils/
+│ │ └── weatherApi.ts
+│ │
+│ ├── types/
+│ │ └── weather.ts
+│ │
+│ ├── App.tsx
+│ └── main.tsx
+│
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.ts
+└── README.md
+
+
 ---
 
-## 📂 Project Structure
+## 🔑 Environment Setup
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_OPENWEATHER_API_KEY=your_openweather_api_key
+
+
+You can get an API key from:
+👉 https://openweathermap.org/api
+
+▶️ Run Locally
+npm install
+npm run dev
+
+
+Then open in browser:
+👉 http://localhost:5173
 
