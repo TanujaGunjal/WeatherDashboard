@@ -10,13 +10,13 @@ export const WeatherCard = ({ weather }: WeatherCardProps) => {
   return (
     <div className="py-8 px-6">
       <div className="flex items-center justify-center gap-2 mb-2">
-        <MapPin className="w-5 h-5 text-white/90" />
-        <h2 className="text-2xl font-semibold text-white">
+        <MapPin className="w-5 h-5 text-gray-600" />
+        <h2 className="text-2xl font-semibold text-gray-800">
           {weather.city}, {weather.country}
         </h2>
       </div>
 
-      <p className="text-white/70 text-center mb-6">{weather.date}</p>
+      <p className="text-gray-600 text-center mb-6">{weather.date}</p>
 
       <div className="flex flex-col items-center mb-8">
         <img
@@ -32,39 +32,39 @@ export const WeatherCard = ({ weather }: WeatherCardProps) => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-white/20">
         <div className="flex flex-col items-center">
-          <Droplets className="w-8 h-8 text-white/80 mb-2" />
-          <p className="text-white/70 text-sm mb-1">Humidity</p>
-          <p className="text-2xl font-semibold text-white">{weather.humidity}%</p>
+          <Droplets className="w-8 h-8 text-gray-600 mb-2" />
+          <p className="text-gray-500 text-sm mb-1">Humidity</p>
+          <p className="text-2xl font-semibold text-gray-800">{weather.humidity}%</p>
         </div>
         <div className="flex flex-col items-center">
-          <Wind className="w-8 h-8 text-white/80 mb-2" />
-          <p className="text-white/70 text-sm mb-1">Wind Speed</p>
-          <p className="text-2xl font-semibold text-white">{weather.windSpeed} m/s</p>
+          <Wind className="w-8 h-8 text-gray-600 mb-2" />
+          <p className="text-gray-500 text-sm mb-1">Wind Speed</p>
+          <p className="text-2xl font-semibold text-gray-800">{weather.windSpeed} m/s</p>
         </div>
         <div className="flex flex-col items-center">
-          <span className="material-icons text-white/80 mb-2">thermostat</span>
-          <p className="text-white/70 text-sm mb-1">Feels Like</p>
-          <p className="text-2xl font-semibold text-white">{weather.feelsLike}°C</p>
+          <span className="material-icons text-gray-600 mb-2">thermostat</span>
+          <p className="text-gray-500 text-sm mb-1">Feels Like</p>
+          <p className="text-2xl font-semibold text-gray-800">{weather.feelsLike}°C</p>
         </div>
         <div className="flex flex-col items-center">
-          <span className="material-icons text-white/80 mb-2">speed</span>
-          <p className="text-white/70 text-sm mb-1">Pressure</p>
-          <p className="text-2xl font-semibold text-white">{weather.pressure} hPa</p>
+          <span className="material-icons text-gray-600 mb-2">speed</span>
+          <p className="text-gray-500 text-sm mb-1">Pressure</p>
+          <p className="text-2xl font-semibold text-gray-800">{weather.pressure} hPa</p>
         </div>
         <div className="flex flex-col items-center">
-          <span className="material-icons text-white/80 mb-2">visibility</span>
-          <p className="text-white/70 text-sm mb-1">Visibility</p>
-          <p className="text-2xl font-semibold text-white">{weather.visibility / 1000} km</p>
+          <span className="material-icons text-gray-600 mb-2">visibility</span>
+          <p className="text-gray-500 text-sm mb-1">Visibility</p>
+          <p className="text-2xl font-semibold text-gray-800">{weather.visibility / 1000} km</p>
         </div>
         <div className="flex flex-col items-center">
-          <span className="material-icons text-white/80 mb-2">wb_sunny</span>
-          <p className="text-white/70 text-sm mb-1">Sunrise</p>
-          <p className="text-2xl font-semibold text-white">{weather.sunrise}</p>
+          <span className="material-icons text-gray-600 mb-2">wb_sunny</span>
+          <p className="text-gray-500 text-sm mb-1">Sunrise</p>
+          <p className="text-2xl font-semibold text-gray-800">{weather.sunrise}</p>
         </div>
         <div className="flex flex-col items-center">
-          <span className="material-icons text-white/80 mb-2">nights_stay</span>
-          <p className="text-white/70 text-sm mb-1">Sunset</p>
-          <p className="text-2xl font-semibold text-white">{weather.sunset}</p>
+          <span className="material-icons text-gray-600 mb-2">nights_stay</span>
+          <p className="text-gray-500 text-sm mb-1">Sunset</p>
+          <p className="text-2xl font-semibold text-gray-800">{weather.sunset}</p>
         </div>
       </div>
     </div>

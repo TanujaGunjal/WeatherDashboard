@@ -14,6 +14,25 @@ function App() {
   const [dailyForecasts, setDailyForecasts] = useState<DailyForecastData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [bgClass, setBgClass] = useState('bg-gradient-to-br from-sky-300 via-blue-200 to-blue-400');
+
+  const getBackgroundClass = (condition: string) => {
+    switch (condition.toLowerCase()) {
+      case 'clear':
+        return 'bg-gradient-to-br from-yellow-200 via-orange-200 to-red-200';
+      case 'clouds':
+        return 'bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400';
+      case 'rain':
+      case 'drizzle':
+        return 'bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500';
+      case 'snow':
+        return 'bg-gradient-to-br from-blue-100 via-white to-blue-200';
+      case 'thunderstorm':
+        return 'bg-gradient-to-br from-gray-600 via-gray-700 to-black';
+      default:
+        return 'bg-gradient-to-br from-sky-300 via-blue-200 to-blue-400';
+    }
+  };
 
   const handleSearch = async (city: string) => {
     setIsLoading(true);
@@ -25,6 +44,7 @@ function App() {
       setWeather(weatherData);
       setHourlyForecasts(hourlyData);
       setDailyForecasts(dailyData);
+      setBgClass(getBackgroundClass(weatherData.condition));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
       setWeather(null);
@@ -36,7 +56,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-sky-300 via-blue-200 to-blue-400 flex flex-col">
       {/* Search Bar at Top Center */}
       <header className="flex justify-center items-center py-8 px-4">
         <div className="w-full max-w-md">
@@ -55,8 +75,8 @@ function App() {
 
           {error && (
             <div className="mx-auto max-w-md p-4 bg-red-500/20 backdrop-blur-sm border border-red-300/30 rounded-2xl flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-red-100 flex-shrink-0 mt-0.5" />
-              <p className="text-red-100 text-sm">{error}</p>
+              <AlertCircle className="w-5 h-5 text-red-800 flex-shrink-0 mt-0.5" />
+              <p className="text-red-800 text-sm">{error}</p>
             </div>
           )}
 
@@ -71,7 +91,7 @@ function App() {
           )}
 
           <div className="mt-6 text-center">
-            <p className="text-white/60 text-sm">
+            <p className="text-gray-700 text-sm">
               Powered by OpenWeatherMap API
             </p>
           </div>
