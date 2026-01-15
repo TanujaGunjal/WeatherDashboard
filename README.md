@@ -31,35 +31,6 @@ The application provides real-time weather information with a clean UI, proper e
 - **Tailwind CSS**
 - **OpenWeather API**
 
-## 📂 Project Structure
-
-WeatherDashboard/
-│
-├── src/
-│ ├── components/
-│ │ ├── SearchBar.tsx
-│ │ ├── EmptyState.tsx
-│ │ ├── WeatherCard.tsx
-│ │ ├── HourlyForecastSection.tsx
-│ │ └── DailyForecastSection.tsx
-│ │
-│ ├── utils/
-│ │ └── weatherApi.ts
-│ │
-│ ├── types/
-│ │ └── weather.ts
-│ │
-│ ├── App.tsx
-│ └── main.tsx
-│
-├── index.html
-├── package.json
-├── tailwind.config.js
-├── vite.config.ts
-└── README.md
-
-
----
 
 ## 🔑 Environment Setup
 
