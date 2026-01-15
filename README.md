@@ -1,9 +1,7 @@
 # 🌤️ Weather Dashboard
 
-A **desktop-first, intermediate-level Weather Dashboard** built using **React, TypeScript, and Vite**, powered by the **OpenWeather API**.  
-The application provides real-time weather information with a clean UI, proper empty-state handling, and forecast visualizations.
-
----
+An intermediate-level Weather Dashboard built with React, TypeScript, and Vite, powered by the OpenWeather API.
+The application provides real-time weather information with a clean, modern user interface, proper empty-state handling, and intuitive forecast visualizations.
 
 ## ✨ Features
 
